@@ -1,0 +1,99 @@
+/* Set margin and padding to 0 for the entire document */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set box-sizing property to border-box */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Set a default font family */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the navbar */
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .navbar li:first-child {
+    margin-left: 0;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style the hero section */
+  .hero {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .app-title a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Style the main section */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+
+  /* h1 {
+    color: #048e62;
+  } */
+
+  .comment-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .comment-btn:hover {
+    background-color: #0069d9;
+  }
+  
+  

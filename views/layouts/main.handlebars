@@ -1,0 +1,49 @@
+{{!-- <!DOCTYPE html> --}}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <link rel="stylesheet" href="css/mainpage.css">
+  {{!-- <link rel="stylesheet" href="/css/style.css"> --}}
+</head>
+<body class="flex-column min-100-vh">
+  <nav class="navbar">
+    <ul>
+      <li class="li-inline nav-item"><a href="/">Home</a></li>
+      <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+      {{#if logged_in}}
+      <li class="li-inline nav-item"><a href="/newpost">Create Post</a></li>
+      {{/if}}
+      {{#if logged_in}}
+        {{!-- Display the logout link if the user is logged in --}}
+        <li class="li-inline nav-item"><a href="#" id="logout">Logout</a></li>
+      {{else}}
+        {{!-- Display the login link if the user is not logged in --}}
+        <li class="li-inline nav-item"><a href="/login">Login</a></li>
+      {{/if}}
+      {{!-- <li class="li-inline nav-item"><a href="/posts">Posts</a></li> <!-- new item --> --}}
+    </ul>
+  </nav>
+  <header class="hero">
+    <h1 class="app-title"><a href="/">The Tech Blog</a></h1>
+  </header>
+  <main class="col-auto">
+    {{!-- <div class="posts">
+      {{#each posts}}
+        <article class="post">
+          <h2 class="post-title">{{title}}</h2>
+          <div class="post-content">{{content}}</div>
+        </article>
+      {{/each}}
+    </div> --}}
+    {{{body}}}
+  </main>
+  <footer class="flex-row justify-center">
+    &copy; The Tech Bloggers
+  </footer>
+  <script src="./js/logout.js"></script>
+  {{!-- <script src="/javascript/edit.js"></script>
+  <script src="/javascript/delete.js"></script> --}}
+</body>
+</html>
