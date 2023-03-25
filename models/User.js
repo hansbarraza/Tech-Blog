@@ -36,14 +36,6 @@ User.init(
           validate: {
             len: [8],
           },
-        // },
-        // posts_id: {
-        //   type: DataTypes.INTEGER,
-        //   allowNull: false,
-        //   references: {
-        //     model: 'post',
-        //     key: 'id'
-        //   }
         }
       },
       {

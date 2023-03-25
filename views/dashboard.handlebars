@@ -1,30 +1,3 @@
-{{!-- <div class="posts">
-      {{#each posts}}
-        <article class="post">
-          <h2 class="post-title">{{title}}</h2>
-          <div class="post-content">{{content}}</div>
-        </article>
-      {{/each}}
-    </div> --}}
-{{!-- 
-<div class="posts">
-  {{#each posts}}
-    <article class="post">
-      <a href="/posts/{{id}}">
-        <h2 class="post-title">{{title}}</h2>
-        <div class="post-content">{{content}}</div>
-      </a>
-      {{#if currentUser}} // Only show edit/delete buttons if user is logged in
-        {{#if (eq currentUser.id user_id)}} // Only show edit/delete buttons if user is post creator
-          <form action="/posts/{{id}}?_method=DELETE" method="POST">
-            <button>Delete</button>
-          </form>
-          <a href="/posts/{{id}}/edit"><button>Edit</button></a>
-        {{/if}}
-      {{/if}}
-    </article>
-  {{/each}}
-</div> --}}
 <div class="posts">
   {{#each posts}}
     <article class="post">

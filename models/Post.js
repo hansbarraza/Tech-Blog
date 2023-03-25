@@ -1,6 +1,7 @@
 const { Model, DataTypes} = require('sequelize');
 
 const sequelize = require('../config/connection');
+const Comment = require('./Comment');
 
 class Post extends Model {}
 
@@ -47,6 +48,13 @@ Post.init(
     },
     
 );
+
+
+// define association between Post and Comment models
+Post.hasMany(require('./Comment'), {
+    foreignKey: 'post_id',
+    onDelete: 'CASCADE',
+  });
 
 
 module.exports = Post;

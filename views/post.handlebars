@@ -1,37 +1,3 @@
-{{!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/mainpage.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-<div class="posts">
-  {{#each posts}}
-    <article class="post">
-      <a href="/posts/{{id}}">
-        <h2 class="post-title">{{title}}</h2>
-        <div class="post-content">{{content}}</div>
-      </a>
-      {{#if currentUser}} // Only show edit/delete buttons if user is logged in
-        {{#if (eq currentUser.id user_id)}} // Only show edit/delete buttons if user is post creator
-          <form action="/posts/{{id}}?_method=DELETE" method="POST">
-            <button>Delete</button>
-          </form>
-          <a href="/posts/{{id}}/edit"><button>Edit</button></a>
-        {{/if}}
-      {{/if}}
-    </article>
-  {{/each}}
-</div>
-
-<h1>P</h1> --}}
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,41 +7,23 @@
     <link rel="stylesheet" href="/css/mainpage.css" />
   </head>
   <body>
-    {{!-- <header>
-      <h1>Tech Blog</h1>
-      {{#if logged_in}}
-        <a href="/dashboard">Dashboard</a>
-        <a href="/logout">Logout</a>
-      {{else}}
-        <a href="/login">Login</a>
-        <a href="/signup">Sign Up</a>
-      {{/if}}
-    </header> --}}
-    <main>
-     {{!-- <div class="post">
-  <h2 class="post-title">{{title}}</h2>
-  <p class="post-author">By {{User.name}}</p>
-  <div class="post-content">{{content}}</div>
-  {{#if currentUser}} 
-    {{#if (eq currentUser.id user_id)}} 
-      <form action="/posts/{{id}}?_method=DELETE" method="POST">
-        <button>Delete</button>
-      </form>
-      <a href="/posts/{{id}}/edit"><button>Edit</button></a>
-    {{/if}}
-  {{/if}}
-</div> --}}
+  
+    {{!-- <main> --}}
+
 <div class="post">
   <h2 class="post-title">{{title}}</h2>
-  <p class="post-author">By {{user.name}} on {{created_at}}</p>
-  <div class="post-content">{{content}}</div>
+  <p class="post-author">By {{user.name}} on {{created_at}}</p><br>
+  <div class="post-content">{{content}}</div><br>
   <button class="comment-btn" data-id={{id}}>Comment</button>
-  <a href="/post/{{id}}/edit"><button>Edit</button></a>
+  <a href="/post/{{id}}/edit"><button class="green">Edit</button></a>
  <button class="delete-btn" data-id={{id}}>Delete</button>
+  <div class="comments">
+    <!-- Comments will be dynamically added here -->
+  </div>
 </div>
 
 
-    </main>
+    {{!-- </main> --}}
     <script src="/js/post.js"></script>
   </body>
 </html>
